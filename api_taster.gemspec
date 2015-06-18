@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'rails', '~> 4.2.0'
   s.add_dependency 'jquery-rails'
-  s.add_dependency 'sass-rails', '~> 4.0.3'
+  s.add_dependency 'sass-rails', '~> 5.0.3'
   #s.add_dependency 'bootstrap-sass', '~> 2.1'
   s.add_dependency 'redcarpet'
   s.add_dependency 'remotipart', '~> 1.0'
