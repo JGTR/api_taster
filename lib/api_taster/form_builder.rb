@@ -68,5 +68,13 @@ module ApiTaster
     def print_labels(parent_labels)
       "#{parent_labels * ''}"
     end
+
+    def flush_output_buffer #:nodoc:
+      if output_buffer && !output_buffer.empty?
+        response.stream.write output_buffer
+        self.output_buffer = output_buffer.respond_to?(:clone_empty) ? output_buffer.clone_empty : output_buffer[0, 0]
+        nil
+      end
+    end
   end
 end
