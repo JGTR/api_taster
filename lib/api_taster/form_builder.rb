@@ -69,6 +69,9 @@ module ApiTaster
       "#{parent_labels * ''}"
     end
 
+    # Removed from Rails action_view but a dependency for gems like api_taster
+    # lib/action_view/helpers/capture_helper.rb
+
     def flush_output_buffer #:nodoc:
       if output_buffer && !output_buffer.empty?
         response.stream.write output_buffer
